@@ -1,0 +1,14 @@
+---
+galaxy_info:
+  author: Hector Castro / Christoffer Vig
+  description: An Ansible role for installing Kibana.
+  company: Azavea Inc. / Comperio Search
+  license: Apache
+  min_ansible_version: 1.2
+  platforms:
+  - name: Ubuntu
+    versions:
+    - trusty
+  categories:
+  - system
+  - monitoring

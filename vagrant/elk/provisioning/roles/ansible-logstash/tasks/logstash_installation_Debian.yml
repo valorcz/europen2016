@@ -1,0 +1,31 @@
+---
+- name: Enable Logstash Repository
+  apt_repository: repo="{{ logstash_apt_repo }}" 
+                  state=present
+  tags: logstash_repo
+
+- name: Add Logstash Repo Key
+  apt_key: url="{{ logstash_repo_key }}" 
+           state=present
+  tags: logstash_repo
+
+- name: Install Logstash
+  apt: pkg=logstash
+       update_cache=yes 
+       state=latest
+  tags: logstash_install
+
+- debug: var=logstash_defaults
+
+- name: Configure default settings for Logstash (Debian only. Upstart on Ubuntu won't be touched)
+  template: src=defaults.conf.j2
+            dest={{ defaults_Debian }}
+            owner=root
+            group=root
+            mode=0644
+            backup=yes
+#  when: ansible_distribution == "Debian"
+  notify:
+   - restart logstash
+  tags:
+   - logstash_defaults

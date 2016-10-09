@@ -1,0 +1,19 @@
+# wget -qO - https://packages.elasticsearch.org/GPG-KEY-elasticsearch | sudo apt-key add -
+#$ echo "deb http://packages.elasticsearch.org/kibana/4.1/debian stable main" | sudo tee -a /etc/apt/sources.list
+#$ sudo apt-get update
+#$ sudo apt-get install kibana
+- name: Enable kibana Repository
+  apt_repository: repo="{{ kibana_apt_repo }}"
+                  state=present
+  tags: kibana_repo
+
+- name: Add kibana Repo Key
+  apt_key: url="{{ kibana_repo_key }}" 
+           state=present
+  tags: kibana_repo
+
+- name: Install kibana
+  apt: pkg=kibana
+       update_cache=yes 
+       state=latest
+  tags: kibana_install

@@ -1,0 +1,138 @@
+{
+   "template" : "aptnotes*",
+   "mappings" : {
+      "document" : {
+         "_timestamp" : {
+            "enabled" : true
+         },
+         "properties" : {
+            "group_name" : {
+               "type" : "string"
+            },
+            "malware" : {
+               "properties" : {
+                  "filenames" : {
+                     "properties" : {
+                        "documents" : {
+                           "type" : "string"
+                        },
+                        "compressed" : {
+                           "type" : "string"
+                        },
+                        "web" : {
+                           "type" : "string"
+                        },
+                        "executables" : {
+                           "type" : "string"
+                        },
+                        "flash" : {
+                           "type" : "string"
+                        }
+                     }
+                  },
+                  "hashes" : {
+                     "properties" : {
+                        "sha256" : {
+                           "type" : "string"
+                        },
+                        "md5s" : {
+                           "type" : "string"
+                        },
+                        "sha1s" : {
+                           "type" : "string"
+                        }
+                     }
+                  }
+               }
+            },
+            "cves" : {
+               "type" : "string"
+            },
+            "indicators" : {
+               "properties" : {
+                  "emails" : {
+                     "type" : "string",
+                     "fields" : {
+                        "raw" : {
+                           "index" : "not_analyzed",
+                           "type" : "string"
+                        }
+                     }
+                  },
+                  "domains" : {
+                     "type" : "string",
+                     "fields" : {
+                        "raw" : {
+                           "index" : "not_analyzed",
+                           "type" : "string"
+                        }
+                     }
+                  },
+                  "urls" : {
+                     "type" : "string",
+                     "fields" : {
+                        "raw" : {
+                           "type" : "string",
+                           "index" : "not_analyzed"
+                        }
+                     }
+                  },
+                  "ips" : {
+                     "properties" : {
+                        "ipv4addresses" : {
+                           "type" : "ip"
+                        }
+                     }
+                  }
+               }
+            },
+            "metadata" : {
+               "properties" : {
+                  "tlp" : {
+                     "type" : "string"
+                  },
+                  "release_date" : {
+                     "type" : "string"
+                  },
+                  "file_metadata" : {
+                     "properties" : {
+                        "sha1" : {
+                           "type" : "string"
+                        },
+                        "filetype" : {
+                           "type" : "string"
+                        },
+                        "filesize" : {
+                           "type" : "long"
+                        },
+                        "filename" : {
+                           "type" : "string"
+                        }
+                     }
+                  },
+                  "authors" : {
+                     "type" : "string"
+                  },
+                  "date_analyzed" : {
+                     "format" : "YYYY-MM-dd HH:mm",
+                     "type" : "date"
+                  },
+                  "source" : {
+                     "type" : "string"
+                  },
+                  "report_name" : {
+                     "type" : "string"
+                  }
+               }
+            },
+            "attribution" : {
+               "type" : "string"
+            }
+         }
+      }
+   },
+   "settings" : {
+      "number_of_shards" : 1
+   },
+   "order" : 0
+}

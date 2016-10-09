@@ -1,0 +1,36 @@
+---
+
+- include: install_source.yml
+  when: not kibana_use_repo
+
+
+- include: install_debian.yml
+  when: ansible_os_family == "Debian" and kibana_use_repo
+
+- name: Configure Kibana
+  template: src=kibana.yml.j2
+             dest={{ kibana_dir }}/config/kibana.yml
+  notify:
+     - Restart Kibana
+
+- include: plugins.yml
+  tags:
+   - kibana_plugins
+  when: (kibana_plugins is defined)
+  notify:
+     - Restart Kibana
+
+- name: Configure Kibana service definition
+  template: src=kibana.conf.j2 dest=/etc/init/kibana.conf
+  notify:
+    - Restart Kibana
+
+- name: Touch log file if it does not exist
+  command: touch {{ kibana_log }}
+           creates={{ kibana_log }}
+
+- name: Set log file permissions
+  file: path={{ kibana_log }} owner={{kibana_user}} group={{kibana_group}} mode=0644
+
+- name: Configure Kibana log rotation
+  template: src=logrotate_kibana.j2 dest=/etc/logrotate.d/kibana

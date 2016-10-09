@@ -1,0 +1,21 @@
+---
+# tasks file for logstash-role
+
+- include: logstash_requirements.yml
+  tags:
+   - logstash_req
+
+- include: logstash_installation_Debian.yml
+  when: ansible_os_family == "Debian"
+
+- include: logstash_installation_RedHat.yml
+  when: ansible_os_family == "RedHat"
+# Install Other Generic Plugins
+- include: plugins.yml
+  tags:
+   - logstash_plugins
+  when: (logstash_plugins is defined)
+
+- include: logstash_configuration.yml
+  tags:
+   - logstash_config

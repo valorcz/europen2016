@@ -1,0 +1,59 @@
+{
+  "message": "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\">\n<html xmlns=\"http://www.w3.org/1999/xhtml\">\n<head>\n<meta content=\"text/html; charset=utf-8\" http-equiv=\"Content-Type\" />\n<title>Express Parcel service</title>\n</head>\n<body>\n<p style=\"font-size: medium; font-family: 'Courier New', Courier, monospace\">Dear vasek.lorenc, we\nhave sent your parcel by <em>Express Parcel service</em>.<br />\n<br />\nThe attachment includes the date and time of the arrival and the lists of the\nitems you ordered.\nPlease check them.\n<br /><br /><br />\nThank you.</p>\n</body>\n</html>\n",
+  "@version": "1",
+  "@timestamp": "2016-09-19T08:31:41.000Z",
+  "received": "from cgw-211-24-116-34.bbrtl.time.net.my (cgw-211-24-116-34.bbrtl.time.net.my [211.24.116.34]) by email-smtpd8.ko.seznam.cz (Seznam SMTPD 1.3.39) with ESMTP; Mon, 19 Sep 2016 10:31:07 +0200",
+  "date": "Mon, 19 Sep 2016 16:31:41 +0800",
+  "from": "Dylan Fowler <Fowler.31@time.net.my>",
+  "to": "vasek.lorenc@seznam.cz",
+  "message-id": "<20160919163141.E83D12383A@time.net.my.local>",
+  "subject": "Express Parcel service ",
+  "mime-version": "1.0",
+  "content-type": "multipart/related; boundary=part_59eb3f14658612d3b5d3842c9235f3b2"
+}
+{
+  "message": "Aktuální EuroJackpot\n \n1,773 MILIARDY Kč\n \nLosování je již v pátek 23.9.2016 ve 20:00 hod.\n \n \n \nObdržíte od nás sázku na dva\nsloupečky zcela ZDARMA! Zkuste své štěstí!\n VSADIT 4 SLOUPCE ZA CENU 2 » \nEuroJackpotová horečka zasáhla kontinent a očekávání před pátečním tahem o 1 773 000 000 Kč jsou obrovská. Vsaďte si EuroJackpot - největší evropskou loterii a staňte se druhým českým miliardářem. Využijte jedinečné slevy 50% a vsaďte si 4 sloupečky za cenu 2!\n \n \n • 3 miliony zákazníků\n• €745 milionů eur vyplaceno na výhrách \n• 24/7 česká online uživatelská podpora \n \nPouze 120 Kč místo 240 Kč.\n VYUŽÍT 50% SLEVU » \n \nČeská republika suveréně vede ligu hráčů EuroJackpotu\n \nZa čtyři roky existence stihl EuroJackpot vygenerovat již mnoho výherců hlavní ceny, nejen u nás v Česku, ale ve všech sedmnácti zúčastněných zemích. Podívejte se s námi, které země si přivlastnili nejvíce výher a kam putovaly ty nejvyšší sumy.\n Zobrazit internetový magazín \n \nTato nabídka se vztahuje pouze na nové hráče, kteří ještě nemají účet. \nTuto nabídku nelze kombinovat s jinými akcemi.\n \n© 2016\n \n \n \n \n \nTato emailová zpráva se považuje za obchodní sdělení, pro odhlášení je třeba odpovědět: stopped",
+  "@version": "1",
+  "@timestamp": "2016-09-25T00:54:07.000Z",
+  "received": [
+    "from mail6.euro2v1.cz (unknown [2a03:b780:1:4:216:3eff:fe00:108f]) by email-smtpd1.ko.seznam.cz (Seznam SMTPD 1.3.39) with ESMTP; Sun, 25 Sep 2016 02:54:09 +0200",
+    "from [127.0.0.1] (localhost [127.0.0.1])"
+  ],
+  "date": "Sun, 25 Sep 2016 02:54:07 +0200",
+  "from": "\"Akce 2 sloupečky ZDARMA\" <info@euro2v1.cz>",
+  "to": "vasek.lorenc@seznam.cz",
+  "message-id": "<hu30982wwy@euro2v1.cz>",
+  "subject": "1,773 miliardy Kč! Zkuste své štěstí v EuroJackpotu",
+  "mime-version": "1.0",
+  "content-type": "multipart/alternative; boundary=--------x3zlcukxua",
+  "dkim-signature": "v=1; a=rsa-sha256; c=relaxed/relaxed; d=euro2v1.cz; s=default; t=1474764847; bh=hhIY9UQ0u+TeDWHKCcwCqCndwskEha7fIKMMuYIq+Js=; h=Date:From:To:Subject; b=2KBnAT7A0RYiUMl00dL90QwKUIptGQu87HPPImCz0tqr5pwyUW40BOZU5A58s4TiL ILOmKdTNvALIC7V+6SO4Uf2kpEi1JzcNV5sccnmA9hjTbl5gSrTbLGE8KIvBEgeNS9 Aakk0HMXlMGm2I95R+s4GQk2d9nt55gp/RDmc6DE=",
+  "x-mailer": "Nette Framework",
+  "precedence": "bulk"
+}
+{
+  "message": "<br>\nHaló! Přišla Vám nová soukromá zpráva na <a href=\"http://seznamka.tk\">seznamce</a> pro všechny věkové skupiny.<br>\nTřeba se chce chce někdo seznámit, nebo si jen popovídat.<br>\n<br>\nPro zobrazení a přihlášení prosím pokračujte na <a href=\"http://seznamka.tk\">Seznamka.tk</a><br>\n<br>\nPřejeme hodně štěstí a těším se na vás ;-)<br>\n<br><br>\nKristýna, admin tým\n<br><br>\n",
+  "@version": "1",
+  "@timestamp": "2016-09-26T08:11:19.000Z",
+  "received": "from seznamka.tk (m.seznamka.tk [193.150.132.183]) by email-smtpd5.ko.seznam.cz (Seznam SMTPD 1.3.39) with ESMTP; Mon, 26 Sep 2016 10:14:17 +0200",
+  "date": "Mon, 26 Sep 2016 08:11:19 +0000",
+  "from": "\"Nová zpráva\" <novazprava@seznamka.tk>",
+  "message-id": "<20160926081229.17F8F4A0A92@seznamka.tk>",
+  "subject": "Doručena nová zpráva Od:",
+  "content-type": "text/html",
+  "dkim-signature": "v=1; a=rsa-sha256; c=simple/simple; d=seznamka.tk; s=default; t=1474877549; bh=rBfooDdYpL8NJolbRn9z/h+7yQUENbqFQ745bD7qVuQ=; h=From:Subject:Date:From; b=byyNRc3WloGd+gNJkZDxGJk5NgKn1nfdiWVREMohwyrFrIlKBxHBBAIipVsQbj6Tm 4/xfCWf4DtwcxZ9ln4A3wiGwXbVVYmsqIcZqYQOAuppc7G3nrLlevCtwCkE/bm5cdg Vq88KnI8SrVcrDYQsPmSAnJbJJ2oC/ZrHfKM80HY="
+}
+{
+  "message": "",
+  "@version": "1",
+  "@timestamp": "2016-09-29T17:15:36.000Z",
+  "received": "from cpe-1c7ee534a4cb.cpe.cableonda.net (cpe-1c7ee534a4cb.cpe.cableonda.net [190.219.35.71]) by email-smtpd2.ko.seznam.cz (Seznam SMTPD 1.3.39) with ESMTP; Thu, 29 Sep 2016 19:15:38 +0200",
+  "date": "Thu, 29 Sep 2016 12:15:36 -0500",
+  "from": "glenn.wellfit@gmail.com",
+  "to": "vasek.lorenc@seznam.cz",
+  "message-id": "<ec4401d8.d71668f5.0ffbd.857b@mx.google.com>",
+  "subject": "Receipt 777-175",
+  "mime-version": "1.0",
+  "content-type": "multipart/mixed; boundary=--boundary_068_96100214-06bb-1dfe-7559-a7b722621d46",
+  "x-google-original-date": "Thu, 29 Sep 2016 12:15:36 -0500",
+  "x-original-to": "vasek.lorenc@seznam.cz"
+}

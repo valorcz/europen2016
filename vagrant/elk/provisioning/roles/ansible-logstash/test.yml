@@ -1,0 +1,21 @@
+- hosts: localhost
+  sudo: yes
+  roles:
+    - role: logstash-role
+      logstash_version: "1.5"
+      logstash_defaults: |
+        LS_USER=root
+        LS_HEAP_SIZE="256m"
+      
+      logstash_inputs: |
+        file {
+              path => "/var/log/auth.log"
+             }
+
+      logstash_filters: |
+        # dummy
+
+      logstash_outputs: |
+        # dummy
+
+      tags: logstash

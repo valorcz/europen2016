@@ -1,0 +1,42 @@
+- name: Create service account for Kibana
+  user: name={{kibana_user}}
+        system=yes
+        home=/var/lib/kibana
+        shell=/bin/false
+        state=present
+
+- name: Download Kibana
+  get_url: url=https://download.elasticsearch.org/kibana/kibana/kibana-{{ kibana_version }}-{{ kibana_os }}-{{ kibana_arch }}.tar.gz
+           dest=/usr/local/src/kibana-{{ kibana_version }}-{{ kibana_os }}-{{ kibana_arch }}.tar.gz
+
+#- name: Extract and install Kibana
+#  unarchive: src=/usr/local/src/kibana-{{ kibana_version }}-{{ kibana_os }}-{{ kibana_arch }}.tar.gz
+#             dest={{ kibana_root_dir }}
+#             copy=no
+#             owner={{kibana_user}}
+#             creates={{ kibana_dir }}
+
+
+- name: Extract and install Kibana (old skool)
+  command: "tar xzf /usr/local/src/kibana-{{ kibana_version }}-{{ kibana_os }}-{{ kibana_arch }}.tar.gz -C {{ kibana_root_dir }}"
+
+
+- name: check kibana installed
+  stat: path={{ kibana_dir }}
+  register: kibana_dir_exists
+
+- name: move kibana into place
+  command: mv {{ kibana_root_dir }}/kibana-{{ kibana_version }}-{{ kibana_os }}-{{ kibana_arch }} {{ kibana_dir }}
+  when: kibana_dir_exists.stat.islnk is not defined
+
+- name: set correct permissions
+  file: path={{kibana_dir}} state=directory owner={{kibana_user}} group={{kibana_group}} recurse=yes
+
+
+- name: Configure Kibana service definition
+  template: src=kibana.conf.j2 dest=/etc/init/kibana.conf
+  notify:
+    - Restart Kibana
+
+- name: modify ownership of babelcache (why?)
+  file: state=touch path=/opt/kibana/optimize/.babelcache.json owner={{kibana_user}} group={{kibana_group}}

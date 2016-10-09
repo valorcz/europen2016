@@ -1,0 +1,60 @@
+{
+   "template" : "twitter",
+   "order" : 1,
+   "settings" : {
+      "number_of_shards" : 1
+   },
+   "mappings" : {
+      "tweet" : {
+         "_all" : {
+            "enabled" : false
+         },
+         "properties" : {
+            "coordinates" : {
+               "properties" : {
+                  "type" : {
+                     "type" : "string"
+                  },
+                  "coordinates" : {
+                     "type" : "geo_point"
+                  }
+               }
+            },
+            "text" : {
+               "type" : "string"
+            }
+         },
+         "dynamic_templates" : [
+            {
+               "message_field" : {
+                  "match" : "message",
+                  "match_mapping_type" : "string",
+                  "mapping" : {
+                     "index" : "analyzed",
+                     "omit_norms" : true,
+                     "type" : "string"
+                  }
+               }
+            },
+            {
+               "string_fields" : {
+                  "match" : "*",
+                  "match_mapping_type" : "string",
+                  "mapping" : {
+                     "omit_norms" : true,
+                     "type" : "string",
+                     "index" : "analyzed",
+                     "fields" : {
+                        "raw" : {
+                           "ignore_above" : 256,
+                           "type" : "string",
+                           "index" : "not_analyzed"
+                        }
+                     }
+                  }
+               }
+            }
+         ]
+      }
+   }
+}

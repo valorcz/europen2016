@@ -1,0 +1,90 @@
+{
+   "template" : "volby*",
+   "order" : 0,
+   "settings" : {
+      "number_of_shards" : 1
+   },
+   "mappings" : {
+      "volby" : {
+         "properties" : {
+            "ss" : {
+               "type" : "string"
+            },
+            "mena_uctu" : {
+               "type" : "string"
+            },
+            "tags" : {
+               "type" : "string"
+            },
+            "poznamka" : {
+               "fields" : {
+                  "raw" : {
+                     "type" : "string",
+                     "index" : "not_analyzed"
+                  }
+               },
+               "type" : "string"
+            },
+            "vs" : {
+               "type" : "string"
+            },
+            "@version" : {
+               "type" : "string"
+            },
+            "mena" : {
+               "type" : "string"
+            },
+            "zprava" : {
+               "type" : "string"
+            },
+            "castka" : {
+               "type" : "double"
+            },
+            "ks" : {
+               "type" : "string"
+            },
+            "typ" : {
+               "type" : "string"
+            },
+            "majitel" : {
+               "fields" : {
+                  "raw" : {
+                     "index" : "not_analyzed",
+                     "type" : "string"
+                  }
+               },
+               "type" : "string"
+            },
+            "protiucet" : {
+               "type" : "string",
+               "fields" : {
+                  "raw" : {
+                     "type" : "string",
+                     "index" : "not_analyzed"
+                  }
+               }
+            },
+            "datum" : {
+               "format" : "YYYY-MM-dd",
+               "type" : "date"
+            },
+            "@timestamp" : {
+               "format" : "strict_date_optional_time||epoch_millis",
+               "type" : "date"
+            },
+            "nazev" : {
+               "fields" : {
+                  "raw" : {
+                     "type" : "string",
+                     "index" : "not_analyzed"
+                  }
+               },
+               "type" : "string"
+            },
+            "uid" : {
+               "type" : "string"
+            }
+         }
+      }
+   }
+}
